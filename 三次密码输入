@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 0;
+    int password;
+
+    while(i < 3)
+    {
+        printf("请输入密码：");
+        scanf("%d",&password);
+        if(135246 != password)
+        {
+            printf("密码输入错误！当前输入第%d次。\n",i+1);
+        }
+        if(i == 2)
+        {
+            printf("强制退出系统!!!");
+            exit(0);
+        }
+        i++;
+    }
+}
