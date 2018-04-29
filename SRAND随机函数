@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>//时间头文件
+int main()
+{
+    //随机函数
+    srand(time(NULL));//使用时间作为种子，产生不一样的随机数字
+        //time时间函数取当前的时间
+    printf("随机数字：%d\n",rand());
+        //rand();只随机一次--(如果不用srand();)
+}
