@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>//时间头文件
+
 int main()
 {
     //随机函数
-    srand(time(NULL));//使用时间作为种子，产生不一样的随机数字
+    //srand(time(NULL));//使用时间作为种子，产生不一样的随机数字
         //time时间函数取当前的时间
+
+	srand((unsigned int)time(NULL));//也可以
+
     printf("随机数字：%d\n",rand());//0-32767
         //rand();只随机一次--(如果不用srand();)
+	printf("0到15的随机数：%d\n",rand()%15);
+		//如果要生成从0开始的随机数，用rand()函数对末尾数取余即可
+	printf("5到25的随机数：%d\n",rand()%20+5);
+		//如果不从0开始，比如要生成5~25的随机数，利用rand()函数对25-5=20取余再加上5，即rand()%d20+5
 }
